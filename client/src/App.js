@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import TickersList from './components/TickersList';
+import { useState, useEffect } from 'react';
+import {getThunkData} from './redux/operations';
 
 function App() {
+
+  // getThunkData();
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Hello!
+      {/* <Header/> */}
+      <TickersList/>
     </div>
   );
 }
