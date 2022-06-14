@@ -1,31 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit';
-import {getThunkData} from './operations';
+import { createReducer } from '@reduxjs/toolkit';
+import { getTickersData } from './actions';
+let array=[];
 
-const tickersData = createSlice({
-  name: 'tickers',
-  initialState: {
-    ticker: "",
-    exchange: "",
-    price: 0,
-    change: 0,
-    change_percent: 0,
-    dividend: 0,
-    yield: 0,
-    last_trade_time: ""
-  },
-  extraReducers: {
-    [getThunkData.pending]: (state, action) => ({
-        ...state,
-    }),
-    [getThunkData.fulfilled]: (state, action) => ({
-        ...state,
-        tickers: action.payload,
-    }),
-    [getThunkData.rejected]: (state, action) => ({
-        ...state,
-        error: action.payload,
-    })}
+export const tickersData = createReducer([],{
+    [getTickersData]: (state, {payload}) => {
+        if(state.length<12) {
+            return [...state, ...payload];
+        }
+        else {
+            array = [...state, ...payload].slice(-12);
+            return array;
+        }
+    },
 });
-
-
-export default tickersData.reducer;

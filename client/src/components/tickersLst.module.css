@@ -1,0 +1,27 @@
+.wrap {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ticker {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.item {
+  width: 80px;
+  padding: 8px;
+}
+.head {
+  background-color: rgb(252, 253, 186);
+}
+.data {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 0 10px;
+}

@@ -3,6 +3,7 @@ const express = require('express');
 const http = require('http');
 const io = require('socket.io');
 const cors = require('cors');
+const { v4: uuidv4 } = require('uuid');
 
 const FETCH_INTERVAL = 5000;
 const PORT = process.env.PORT || 4000;
@@ -29,6 +30,7 @@ function utcDate() {
 function getQuotes(socket) {
 
   const quotes = tickers.map(ticker => ({
+    id: uuidv4(),
     ticker,
     exchange: 'NASDAQ',
     price: randomValue(100, 300, 2),
