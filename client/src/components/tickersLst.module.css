@@ -1,10 +1,10 @@
 .wrap {
-  width: 600px;
+  width: 320px;
   margin-left: auto;
   margin-right: auto;
 }
 .ticker {
-  width: 600px;
+  width: 320px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,15 +13,38 @@
   border-radius: 8px;
 }
 .item {
-  width: 80px;
-  padding: 8px;
+  width: 45px;
+  padding: 4px;
 }
 .head {
   background-color: rgb(252, 253, 186);
+  font-size: 10px;
 }
 .data {
-  width: 600px;
+  width: 320px;
+  font-size: 10px;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 0 0 10px;
+  
+}
+
+@media screen and (min-width: 768px) {
+  .wrap {
+    width: 600px;
+  }
+  .ticker {
+    width: 600px;
+  }
+  .head {
+    font-size: 16px;
+  }
+  .data {
+    width: 600px;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  .item {
+    width: 80px;
+    padding: 8px;
+  }
 }

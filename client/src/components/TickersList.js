@@ -7,10 +7,17 @@ export default function TickersList() {
   const dispatch = useDispatch();
   const tickers = useSelector(state => state.tickers);
 
+  let tickersFirst = [];
+  let tickersNext = [];
+
 
   useEffect(() => {
     dispatch(getTickerData());
   }, [dispatch]);
+
+  tickersFirst = tickers.slice(0,-6);
+  tickersNext = tickers.slice(-6);
+
 
   return (
 
@@ -23,7 +30,15 @@ export default function TickersList() {
         ))}
       </div>
       <div className={s.data}>
-      {tickers.map((el) => (
+      {/* {tickers.map((el) => (
+          <div className={s.item} key={el.id}>{el.price} </div>
+        ))} */}
+      {tickersFirst.map((el) => (
+          <div className={s.item} key={el.id}>
+            {el.price} 
+          </div>
+        ))}
+      {tickersNext.map((el) => (
           <div className={s.item} key={el.id}>{el.price} </div>
         ))}
       </div>
