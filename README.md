@@ -63,6 +63,7 @@ Price tickers are real-time via web-sockets.
 ```json
 [
   {
+    "id":"bc340619-3dea-4338-a6b4-f12f9ac914b9",
     "ticker": "AAPL",
     "exchange": "NASDAQ",
     "price": 279.29,
