@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://RitaDyvnych.github.io/finance-test-task",
+  "homepage": "https://ritadyvnych.github.io/finance-test-task/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "@testing-library/jest-dom": "^5.11.4",
