@@ -12,4 +12,7 @@ export const tickersData = createReducer([],{
             return array;
         }
     },
+    // [deletTickers]: (state, {payload}) => {
+    //     return state.tickers.filter(({id}) => id !== payload);
+    // },
 });
